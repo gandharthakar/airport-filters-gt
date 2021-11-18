@@ -1,0 +1,29 @@
+{
+  "name": "airport-filters-gt",
+  "version": "1.0.0",
+  "description": "This is client side airport filter demo.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gandharthakar/airport-filters-gt.git"
+  },
+  "author": "Gandhar Thakar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gandharthakar/airport-filters-gt/issues"
+  },
+  "homepage": "https://github.com/gandharthakar/airport-filters-gt#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4"
+  },
+  "browserslist": [
+    "last 100 versions"
+  ]
+}
