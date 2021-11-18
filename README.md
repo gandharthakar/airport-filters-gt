@@ -1,4 +1,4 @@
-# Airplain Filters Demo.
+# Airport Filters Demo.
 
 This is client side filter demo made with HTML, CSS And Javascript.
 
