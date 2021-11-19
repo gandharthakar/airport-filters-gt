@@ -1,0 +1,11 @@
+@import './mixins';
+@import './site_common';
+
+// 
+// "Nimbus Sans L" All Font Styles.
+// 
+
+@include font-face("Nimbus Sans L", normal, 300, $public_path_for_fonts + 'nimbus-sans-l/regular/', 'nimbus-sans-l-regular', true);
+@include font-face("Nimbus Sans L", italic, 300, $public_path_for_fonts + 'nimbus-sans-l/regular-italic/', 'nimbus-sans-l-regularitalic', true);
+@include font-face("Nimbus Sans L", normal, bold, $public_path_for_fonts + 'nimbus-sans-l/bold/', 'nimbus-sans-l-bold', true);
+@include font-face("Nimbus Sans L", italic, bold, $public_path_for_fonts + 'nimbus-sans-l/bold-italic/', 'nimbus-sans-l-bolditalic', true);

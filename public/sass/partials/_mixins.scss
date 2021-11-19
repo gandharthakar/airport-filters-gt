@@ -1,0 +1,32 @@
+// ======================
+// @font-face Mixin
+//=======================
+
+@mixin font-face($name, $style, $weight, $path, $font_file_name, $svg_font_type : false) {
+    @if $svg_font_type {
+        @font-face {
+            font-family: $name;
+            font-style: $style;
+            font-weight: $weight;
+            src: url($path + $font_file_name + '.eot') format("eot"), /* IE9 Compat Modes */
+            url($path + $font_file_name + '.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+            url($path + $font_file_name + '.woff2') format("woff2"), /* Super Modern Browsers */
+            url($path + $font_file_name + '.woff') format("woff"), /* Pretty Modern Browsers */
+            url($path + $font_file_name + '.ttf') format("truetype"),  /* Safari, Android, iOS */
+            url($path + $font_file_name + '.otf') format("opentype"),
+            url($path + $font_file_name + '.svg') format("svg"); /* Legacy iOS */
+        }
+    } @else {
+        @font-face {
+            font-family: $name;
+            font-style: $style;
+            font-weight: $weight;
+            src: url($path + $font_file_name + '.eot') format("eot"), /* IE9 Compat Modes */
+            url($path + $font_file_name + '.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+            url($path + $font_file_name + '.woff2') format("woff2"), /* Super Modern Browsers */
+            url($path + $font_file_name + '.woff') format("woff"), /* Pretty Modern Browsers */
+            url($path + $font_file_name + '.ttf') format("truetype"),  /* Safari, Android, iOS */
+            url($path + $font_file_name + '.otf') format("opentype"); /* Legacy iOS */
+        }
+    }
+}

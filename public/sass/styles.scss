@@ -1,4 +1,5 @@
 @import './partials/site_common';
+@import './partials/fonts';
 
 * {
     padding: 0px;
@@ -8,4 +9,83 @@
     outline-offset: 0 !important;
     outline-width: 0 !important;
     outline-style: none !important;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* ---- Common ---- */
+
+.site-outer-pad {
+    padding-left: $site_mobile_lr_padding;
+    padding-right: $site_mobile_lr_padding;
+}
+
+.site-container {
+    max-width: $site_container_width;
+    margin: 0px auto;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 50px 0px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 30px $site_mobile_lr_padding;
+        margin: 20px 0px;
+    }
+}
+
+/* ---- Common ---- */
+
+.main__header {
+    display: flex;
+    align-items: center;
+}
+
+.filter-head-title {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 70px;
+    font-family: "Nimbus Sans L";
+    color: #000000;
+    font-weight: bold;
+    & .light-text {
+        color: #e0e0e0;
+    }
+}
+
+.foursq-cnt {
+    margin-left: auto;
+}
+
+.four-squres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 17px;
+    gap: 1px;
+    & .squre {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #000000;
+    }
+}
+
+@media (max-width: 767px) {
+    .filter-head-title {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .filter-head-title {
+        font-size: 30px;
+    }
 }

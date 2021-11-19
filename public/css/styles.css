@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "Nimbus Sans L";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.eot") format("eot"), url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.eot?#iefix") format("embedded-opentype"), url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.woff2") format("woff2"), url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.woff") format("woff"), url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.ttf") format("truetype"), url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.otf") format("opentype"), url("./../fonts/nimbus-sans-l/regular/nimbus-sans-l-regular.svg") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.eot") format("eot"), url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.eot?#iefix") format("embedded-opentype"), url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.woff2") format("woff2"), url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.woff") format("woff"), url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.ttf") format("truetype"), url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.otf") format("opentype"), url("./../fonts/nimbus-sans-l/regular-italic/nimbus-sans-l-regularitalic.svg") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.eot") format("eot"), url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.eot?#iefix") format("embedded-opentype"), url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.woff2") format("woff2"), url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.woff") format("woff"), url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.ttf") format("truetype"), url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.otf") format("opentype"), url("./../fonts/nimbus-sans-l/bold/nimbus-sans-l-bold.svg") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  font-style: italic;
+  font-weight: bold;
+  src: url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.eot") format("eot"), url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.eot?#iefix") format("embedded-opentype"), url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.woff2") format("woff2"), url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.woff") format("woff"), url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.ttf") format("truetype"), url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.otf") format("opentype"), url("./../fonts/nimbus-sans-l/bold-italic/nimbus-sans-l-bolditalic.svg") format("svg");
+  /* Legacy iOS */
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -6,4 +34,95 @@
   outline-offset: 0 !important;
   outline-width: 0 !important;
   outline-style: none !important;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+/* ---- Common ---- */
+.site-outer-pad {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.wrapper {
+  background-color: #ffffff;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  padding: 50px;
+  margin: 50px 0px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 30px 20px;
+    margin: 20px 0px;
+  }
+}
+/* ---- Common ---- */
+.main__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-head-title {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  font-size: 70px;
+  font-family: "Nimbus Sans L";
+  color: #000000;
+  font-weight: bold;
+}
+.filter-head-title .light-text {
+  color: #e0e0e0;
+}
+
+.foursq-cnt {
+  margin-left: auto;
+}
+
+.four-squres {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 17px;
+  gap: 1px;
+}
+.four-squres .squre {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .filter-head-title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .filter-head-title {
+    font-size: 30px;
+  }
 }
