@@ -8,8 +8,8 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="public/css/styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="public/production/production.css" />
     </head>
     <body>
 
@@ -28,9 +28,182 @@
                         </div>
                     </div>
                 </header>
+
+                <!-- Filter Mobile Button -->
+
+                <div class="filter__mobbtn-cnt">
+                    <button type="button" class="filter__mobbtn icon-true js-toggle-filters" title="Filters">
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                            <g>
+                                <path d="M0,0h24 M24,24H0" fill="none"/>
+                                <path d="M7,6h10l-5.01,6.3L7,6z M4.25,5.61C6.27,8.2,10,13,10,13v6c0,0.55,0.45,1,1,1h2c0.55,0,1-0.45,1-1v-6 c0,0,3.72-4.8,5.74-7.39C20.25,4.95,19.78,4,18.95,4H5.04C4.21,4,3.74,4.95,4.25,5.61z"/>
+                                <path d="M0,0h24v24H0V0z" fill="none"/>
+                            </g>
+                        </svg>
+                        <span class="str">Filters</span>
+                    </button>
+
+                    <!-- Filters -->
+
+                    <div class="filters__row js-mob-filters">
+                        <div class="filters__chkcnt">
+                            <div class="filters__ittlcnt">
+                                <h2 class="filters__ittl">Type</h2>
+                            </div>
+                            <div class="filters__chkotr">
+                                <div class="filters__chkitem">
+                                    <div class="filters__chkmcnt">
+                                        <input type="checkbox" name="type_filter" class="filters__chkbox" id="filchk__1" value="small" />
+                                        <label class="filters__chkbox-lable" for="filchk__1">
+                                            <div class="chk-sqbox"><div class="tickmark"></div></div>
+                                            <div class="chkbox-str">Small</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filters__chkitem">
+                                    <div class="filters__chkmcnt">
+                                        <input type="checkbox" name="type_filter" class="filters__chkbox" id="filchk__2" value="medium" />
+                                        <label class="filters__chkbox-lable" for="filchk__2">
+                                            <div class="chk-sqbox"><div class="tickmark"></div></div>
+                                            <div class="chkbox-str">Medium</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filters__chkitem">
+                                    <div class="filters__chkmcnt">
+                                        <input type="checkbox" name="type_filter" class="filters__chkbox" id="filchk__3" value="large" />
+                                        <label class="filters__chkbox-lable" for="filchk__3">
+                                            <div class="chk-sqbox"><div class="tickmark"></div></div>
+                                            <div class="chkbox-str">Large</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filters__chkitem">
+                                    <div class="filters__chkmcnt">
+                                        <input type="checkbox" name="type_filter" class="filters__chkbox" id="filchk__4" value="heliport" />
+                                        <label class="filters__chkbox-lable" for="filchk__4">
+                                            <div class="chk-sqbox"><div class="tickmark"></div></div>
+                                            <div class="chkbox-str">Heliport</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filters__chkitem">
+                                    <div class="filters__chkmcnt">
+                                        <input type="checkbox" name="type_filter" class="filters__chkbox" id="filchk__5" value="closed" />
+                                        <label class="filters__chkbox-lable" for="filchk__5">
+                                            <div class="chk-sqbox"><div class="tickmark"></div></div>
+                                            <div class="chkbox-str">Closed</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filters__chkitem">
+                                    <div class="filters__chkmcnt">
+                                        <input type="checkbox" name="type_filter" class="filters__chkbox" id="filchk__6" value="favorites" />
+                                        <label class="filters__chkbox-lable" for="filchk__6">
+                                            <div class="chk-sqbox"><div class="tickmark"></div></div>
+                                            <div class="chkbox-str">in your favorites</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__srchcnt">
+                            <div class="filters__ittlcnt">
+                                <h2 class="filters__ittl">Filter By Search</h2>
+                            </div>
+                            <form>
+                                <div class="filters__srchinp-cnt">
+                                    <input type="text" class="filters__srchinp" placeholder="Search ..." />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Table -->
+                <div class="data__table-otr">
+                    <div class="table-responsive">
+                        <table cellspacing="0" cellpadding="0" class="data__table">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> ICAO </th>
+                                    <th> IATA </th>
+                                    <th> Elev. </th>
+                                    <th> Lat. </th>
+                                    <th> Long. </th>
+                                    <th> Type </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Goroka Airport</td>
+                                    <td> AYGA </td>
+                                    <td> GKA </td>
+                                    <td> 808 </td>
+                                    <td> -6.081689834590001 </td>
+                                    <td> 145.391998291 </td>
+                                    <td> small </td>
+                                </tr>
+                                <tr>
+                                    <td>Goroka Airport</td>
+                                    <td> AYGA </td>
+                                    <td> GKA </td>
+                                    <td> 808 </td>
+                                    <td> -6.081689834590001 </td>
+                                    <td> 145.391998291 </td>
+                                    <td> small </td>
+                                </tr>
+                                <tr>
+                                    <td>Goroka Airport</td>
+                                    <td> AYGA </td>
+                                    <td> GKA </td>
+                                    <td> 808 </td>
+                                    <td> -6.081689834590001 </td>
+                                    <td> 145.391998291 </td>
+                                    <td> small </td>
+                                </tr>
+                                <tr>
+                                    <td>Goroka Airport</td>
+                                    <td> AYGA </td>
+                                    <td> GKA </td>
+                                    <td> 808 </td>
+                                    <td> -6.081689834590001 </td>
+                                    <td> 145.391998291 </td>
+                                    <td> small </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="data__navigation-otr">
+                    <div class="data__navigation-cnt prev">
+                        <button type="button" class="data__navigation-button" title="Previous">
+                            <svg class="svg-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="199.404px" height="199.404px" viewBox="0 0 199.404 199.404" xml:space="preserve">
+                                <g>
+                                    <polygon class="shape-fill" points="199.404,81.529 74.742,81.529 127.987,28.285 99.701,0 0,99.702 99.701,199.404 127.987,171.119 74.742,117.876 199.404,117.876 "/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="result-text">
+                        Showing <strong>5-8</strong> of <strong>10,382</strong> results
+                    </div>
+                    <div class="data__navigation-cnt next">
+                        <button type="button" class="data__navigation-button" title="Next">
+                            <svg class="svg-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="199.405px" height="199.405px" viewBox="0 0 199.405 199.405" xml:space="preserve">
+                                <g>
+                                    <polygon class="shape-fill" points="99.703,199.405 199.405,99.702 99.703,0 71.418,28.285 124.662,81.529 0,81.529 0,117.876 124.662,117.876 71.418,171.12 "/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <script type="module" src="public/js/main.js"></script>
+        <script type="module" src="public/production/production.js"></script>
     </body>
 </html>
