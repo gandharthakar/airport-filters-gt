@@ -1,2 +1,0 @@
-"use strict";var mobi_filter_button=document.querySelector(".js-toggle-filters"),filter_container=document.querySelector(".js-mob-filters");mobi_filter_button.addEventListener("click",function(){this.classList.contains("active")?(this.classList.remove("active"),filter_container.classList.remove("active")):(this.classList.add("active"),filter_container.classList.add("active"))});
-//# sourceMappingURL=production.js.map
