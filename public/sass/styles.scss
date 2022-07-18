@@ -352,17 +352,24 @@ body {
     margin: 0px;
     border: 0px;
     cursor: pointer;
-    &:hover, &:active {
-        background-color: transparent;
-        color: #000000;
-    }
     & .svg-icon {
         display: inline-block;
         width: 50px;
         height: 30px;
     }
-}
-
-@media (max-width: 767px) {
-
+    & .shape-fill {
+        fill: #000000;
+    }
+    &:hover, &:active {
+        background-color: transparent;
+        color: #000000;
+    }
+    &.disabled, &[disabled] {
+        pointer-events: none;
+        background-color: transparent;
+        color: #000000;
+        & .shape-fill {
+            fill: #686868;
+        }
+    }
 }
