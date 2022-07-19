@@ -10,6 +10,17 @@ $(function() {
 	// Update Default Number Of Record Set Text.
 	$('.curovral__count').text(global_config.number_of_records_per_page);
 
+	// Check If Records Per Page Will Match With Data Length.
+	function check_record_limit_with_data_length(data) {
+		let next_btn = $('.js-show-nextpage');
+		let prev_btn = $('.js-show-prevpage');
+		if(global_config.number_of_records_per_page == data.length) {
+			console.log('going');
+			next_btn.attr('disabled', true);
+			prev_btn.attr('disabled', true);
+		}
+	}
+
 	// Mobile Filter Toggle.
     $('.js-toggle-filters').on('click', function(){
 		let filter_container = $('.js-mob-filters');
@@ -28,6 +39,7 @@ $(function() {
 			let resp = await fetch(global_config.api_url)
 			let data = await resp.json();
 			generate_table(global_config.default_page_index, global_config.number_of_records_per_page, global_config.prev_next_index, data);
+			check_record_limit_with_data_length(data);
 		} catch (error) {
 			console.log(error);
 		}

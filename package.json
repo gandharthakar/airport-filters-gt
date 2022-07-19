@@ -4,7 +4,11 @@
   "description": "This is client side airport filter demo.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:css": "sass public/sass/style.scss:public/css/style.css --style expanded",
+    "prefix:css": "postcss public/css/style.css -u autoprefixer -b 'last 100 versions' --map=false -o public/css/style.css",
+    "minify:css": "sass public/css/style.css:public/css/style.min.css --style compressed",
+    "build-css": "npm-run-all compile:css prefix:css minify:css",
+    "watch": "nodemon --watch public/sass/ --ext scss --exec \"npm-run-all build-css\""
   },
   "repository": {
     "type": "git",
@@ -17,14 +21,12 @@
   },
   "homepage": "https://github.com/gandharthakar/airport-filters-gt#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.43.4"
+    "autoprefixer": "^10.4.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.53.0",
+    "nodemon": "^2.0.19"
   },
   "browserslist": [
     "last 100 versions"
