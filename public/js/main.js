@@ -18,7 +18,7 @@ function shuffleArray(array) {
 			array[j] = temp;
 	}
 	return array;
- }
+}
 
 // Toggle Mobile Filters.
 const mobi_filter_button = document.querySelector('.js-toggle-filters');
