@@ -103,10 +103,8 @@ $(function() {
 				let data = JSON.parse(localStorage.getItem(key_offline_data));
 				for(let a = 0; a < data.length; a++) {
 					if(data[a].type === this.value) {
-						if(data[a].length > 0) {
-							global_filter_result.push(data[a]);
-							shuffleArray(global_filter_result);
-						}
+						global_filter_result.push(data[a]);
+						shuffleArray(global_filter_result);
 					}
 				}
 				applied_filters.push(this.value);
